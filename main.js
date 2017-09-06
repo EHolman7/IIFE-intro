@@ -1,42 +1,38 @@
-console.log("Linked to main.js");
-// function moreCrap (){
-// 	console.log("hi");
-// }
+//console.log("Linked to main.js");
+// var SolarSystem = (function(oldSolarSystem){
+// 	const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "netune"];
 
-// let Something = (function(oldSomething){
-// 	oldSomething.niceFunction = function(){
-// 		console.log("I'm a nice function");
+// 	oldSolarSystem.getPlanets = function(){
+// 		return planets;
+// 	};
+
+// 	oldSolarSystem.setPlanets = function(newPlanet){
+// 		planets.push(newPlanet);
 // 	}
 
-// 	return oldSomething;
+// 	const spacecraft = ["space shuttle", "rocket", "millennium falcon", "tie fighter", "x-wing starfighter", "star destroyer"];
 
-// })(Something || {});
+// 	oldSolarSystem.getSpacecraft = function(){
+// 		return spacecraft;
+// 	};
 
-var SolarSystem = (function(oldSolarSystem){
-	const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "netune"];
+// 	oldSolarSystem.setSpacecraft = function(newSpacecraft){
+// 		spacecraft.push(newSpacecraft);
+// 	}
 
-	oldSolarSystem.getPlanets = function(){
-		return planets;
-	};
+// 	return oldSolarSystem;
+// })(SolarSystem || {});
 
-	oldSolarSystem.setPlanets = function(newPlanet){
-		planets.push(newPlanet);
-	}
-
-	const spacecraft = ["space shuttle", "rocket", "millennium falcon", "tie fighter", "x-wing starfighter", "star destroyer"];
-
-	oldSolarSystem.getSpacecraft = function(){
-		return spacecraft;
-	};
-
-	oldSolarSystem.setSpacecraft = function(newSpacecraft){
-		spacecraft.push(newSpacecraft);
-	}
-
-	return oldSolarSystem;
-})(SolarSystem || {});
+SolarSystem.setPlanets("Planet X")
 
 let myPlanets = SolarSystem.getPlanets();
 console.log("myPlanets", myPlanets);
+
 let mySpacecrafts = SolarSystem.getSpacecraft();
 console.log("mySpacecrafts", mySpacecrafts);
+
+let myStars = SolarSystem.getStars();
+console.log("myStars", myStars);
+
+let myConstellations = SolarSystem.getConstellations();
+console.log("myConstellations", myConstellations);
